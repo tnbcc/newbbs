@@ -8,7 +8,7 @@ Route::group(['namespace'=> 'Home'],function (){
 /**后台模块**/
 Route::group(['namespace' => 'Admin','prefix' => 'admin'], function (){
 
-    Route::get('login','AdminsController@showLoginForm')->name('login');  //后台登陆页面
+    Route::get('login','AdminsController@showLoginForm')->name('admin.login');  //后台登陆页面
 
     Route::post('login-handle','AdminsController@loginHandle')->name('login-handle'); //后台登陆逻辑
 
@@ -45,3 +45,4 @@ Route::group(['namespace' => 'Admin','prefix' => 'admin'], function (){
     });
 });
 Route::get('test','TestController@index');
+Auth::routes();

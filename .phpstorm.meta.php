@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2018-08-08 11:41:59.
+    * Generated on 2018-08-08 13:09:29.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -64,7 +64,7 @@ namespace PHPSTORM_META {
         'excel' => \Maatwebsite\Excel\Excel::class,
         'geetest' => \Germey\Geetest\GeetestLib::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
-        'translation.loader' => \Illuminate\Translation\FileLoader::class,
+        'translation.loader' => \Overtrue\LaravelLang\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
@@ -220,7 +220,7 @@ namespace PHPSTORM_META {
         'excel' => \Maatwebsite\Excel\Excel::class,
         'geetest' => \Germey\Geetest\GeetestLib::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
-        'translation.loader' => \Illuminate\Translation\FileLoader::class,
+        'translation.loader' => \Overtrue\LaravelLang\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
@@ -376,7 +376,7 @@ namespace PHPSTORM_META {
         'excel' => \Maatwebsite\Excel\Excel::class,
         'geetest' => \Germey\Geetest\GeetestLib::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
-        'translation.loader' => \Illuminate\Translation\FileLoader::class,
+        'translation.loader' => \Overtrue\LaravelLang\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
@@ -532,7 +532,7 @@ namespace PHPSTORM_META {
         'excel' => \Maatwebsite\Excel\Excel::class,
         'geetest' => \Germey\Geetest\GeetestLib::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
-        'translation.loader' => \Illuminate\Translation\FileLoader::class,
+        'translation.loader' => \Overtrue\LaravelLang\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
@@ -688,7 +688,7 @@ namespace PHPSTORM_META {
         'excel' => \Maatwebsite\Excel\Excel::class,
         'geetest' => \Germey\Geetest\GeetestLib::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
-        'translation.loader' => \Illuminate\Translation\FileLoader::class,
+        'translation.loader' => \Overtrue\LaravelLang\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
@@ -844,7 +844,7 @@ namespace PHPSTORM_META {
         'excel' => \Maatwebsite\Excel\Excel::class,
         'geetest' => \Germey\Geetest\GeetestLib::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
-        'translation.loader' => \Illuminate\Translation\FileLoader::class,
+        'translation.loader' => \Overtrue\LaravelLang\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
@@ -1000,7 +1000,7 @@ namespace PHPSTORM_META {
         'excel' => \Maatwebsite\Excel\Excel::class,
         'geetest' => \Germey\Geetest\GeetestLib::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
-        'translation.loader' => \Illuminate\Translation\FileLoader::class,
+        'translation.loader' => \Overtrue\LaravelLang\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
