@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.5.40 on 2018-07-12 08:32:10.
+ * Generated for Laravel 5.5.40 on 2018-08-08 02:59:25.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -3293,98 +3293,6 @@ namespace Illuminate\Support\Facades {
         public static function getQueuedCookies()
         {
             return \Illuminate\Cookie\CookieJar::getQueuedCookies();
-        }
-         
-    }
-
-    class Crypt {
-        
-        /**
-         * Determine if the given key and cipher combination is valid.
-         *
-         * @param string $key
-         * @param string $cipher
-         * @return bool 
-         * @static 
-         */ 
-        public static function supported($key, $cipher)
-        {
-            return \Illuminate\Encryption\Encrypter::supported($key, $cipher);
-        }
-        
-        /**
-         * Create a new encryption key for the given cipher.
-         *
-         * @param string $cipher
-         * @return string 
-         * @static 
-         */ 
-        public static function generateKey($cipher)
-        {
-            return \Illuminate\Encryption\Encrypter::generateKey($cipher);
-        }
-        
-        /**
-         * Encrypt the given value.
-         *
-         * @param mixed $value
-         * @param bool $serialize
-         * @return string 
-         * @throws \Illuminate\Contracts\Encryption\EncryptException
-         * @static 
-         */ 
-        public static function encrypt($value, $serialize = true)
-        {
-            return \Illuminate\Encryption\Encrypter::encrypt($value, $serialize);
-        }
-        
-        /**
-         * Encrypt a string without serialization.
-         *
-         * @param string $value
-         * @return string 
-         * @static 
-         */ 
-        public static function encryptString($value)
-        {
-            return \Illuminate\Encryption\Encrypter::encryptString($value);
-        }
-        
-        /**
-         * Decrypt the given value.
-         *
-         * @param mixed $payload
-         * @param bool $unserialize
-         * @return string 
-         * @throws \Illuminate\Contracts\Encryption\DecryptException
-         * @static 
-         */ 
-        public static function decrypt($payload, $unserialize = true)
-        {
-            return \Illuminate\Encryption\Encrypter::decrypt($payload, $unserialize);
-        }
-        
-        /**
-         * Decrypt the given string without unserialization.
-         *
-         * @param string $payload
-         * @return string 
-         * @static 
-         */ 
-        public static function decryptString($payload)
-        {
-            return \Illuminate\Encryption\Encrypter::decryptString($payload);
-        }
-        
-        /**
-         * Get the encryption key.
-         *
-         * @return string 
-         * @static 
-         */ 
-        public static function getKey()
-        {
-            return \Illuminate\Encryption\Encrypter::getKey();
         }
          
     }
@@ -12374,6 +12282,7 @@ namespace Germey\Geetest {
          * 
          *
          * @param string $geetestUrl
+         * @return \Germey\Geetest\GeetestLib 
          * @static 
          */ 
         public static function setGeetestUrl($url)
@@ -12454,118 +12363,6 @@ namespace Germey\Geetest {
         {
             return \Germey\Geetest\GeetestLib::render($product, $captchaId);
         }
-         
-    }
- 
-}
-
-namespace Laracasts\Flash { 
-
-    class Flash {
-        
-        /**
-         * Flash an information message.
-         *
-         * @param string|null $message
-         * @return $this 
-         * @static 
-         */ 
-        public static function info($message = null)
-        {
-            return \Laracasts\Flash\FlashNotifier::info($message);
-        }
-        
-        /**
-         * Flash a success message.
-         *
-         * @param string|null $message
-         * @return $this 
-         * @static 
-         */ 
-        public static function success($message = null)
-        {
-            return \Laracasts\Flash\FlashNotifier::success($message);
-        }
-        
-        /**
-         * Flash an error message.
-         *
-         * @param string|null $message
-         * @return $this 
-         * @static 
-         */ 
-        public static function error($message = null)
-        {
-            return \Laracasts\Flash\FlashNotifier::error($message);
-        }
-        
-        /**
-         * Flash a warning message.
-         *
-         * @param string|null $message
-         * @return $this 
-         * @static 
-         */ 
-        public static function warning($message = null)
-        {
-            return \Laracasts\Flash\FlashNotifier::warning($message);
-        }
-        
-        /**
-         * Flash a general message.
-         *
-         * @param string|null $message
-         * @param string|null $level
-         * @return $this 
-         * @static 
-         */ 
-        public static function message($message = null, $level = null)
-        {
-            return \Laracasts\Flash\FlashNotifier::message($message, $level);
-        }
-        
-        /**
-         * Flash an overlay modal.
-         *
-         * @param string|null $message
-         * @param string $title
-         * @return $this 
-         * @static 
-         */ 
-        public static function overlay($message = null, $title = 'Notice')
-        {
-            return \Laracasts\Flash\FlashNotifier::overlay($message, $title);
-        }
-        
-        /**
-         * Add an "important" flash to the session.
-         *
-         * @return $this 
-         * @static 
-         */ 
-        public static function important()
-        {
-            return \Laracasts\Flash\FlashNotifier::important();
-        }
-        
-        /**
-         * Clear all registered messages.
-         *
-         * @return $this 
-         * @static 
-         */ 
-        public static function clear()
-        {
-            return \Laracasts\Flash\FlashNotifier::clear();
-        }
-         
-    }
- 
-}
-
-namespace Zhuzhichao\IpLocationZh { 
-
-    class Ip {
          
     }
  
@@ -13119,6 +12916,110 @@ namespace Barryvdh\Debugbar {
  
 }
 
+namespace Laracasts\Flash { 
+
+    class Flash {
+        
+        /**
+         * Flash an information message.
+         *
+         * @param string|null $message
+         * @return $this 
+         * @static 
+         */ 
+        public static function info($message = null)
+        {
+            return \Laracasts\Flash\FlashNotifier::info($message);
+        }
+        
+        /**
+         * Flash a success message.
+         *
+         * @param string|null $message
+         * @return $this 
+         * @static 
+         */ 
+        public static function success($message = null)
+        {
+            return \Laracasts\Flash\FlashNotifier::success($message);
+        }
+        
+        /**
+         * Flash an error message.
+         *
+         * @param string|null $message
+         * @return $this 
+         * @static 
+         */ 
+        public static function error($message = null)
+        {
+            return \Laracasts\Flash\FlashNotifier::error($message);
+        }
+        
+        /**
+         * Flash a warning message.
+         *
+         * @param string|null $message
+         * @return $this 
+         * @static 
+         */ 
+        public static function warning($message = null)
+        {
+            return \Laracasts\Flash\FlashNotifier::warning($message);
+        }
+        
+        /**
+         * Flash a general message.
+         *
+         * @param string|null $message
+         * @param string|null $level
+         * @return $this 
+         * @static 
+         */ 
+        public static function message($message = null, $level = null)
+        {
+            return \Laracasts\Flash\FlashNotifier::message($message, $level);
+        }
+        
+        /**
+         * Flash an overlay modal.
+         *
+         * @param string|null $message
+         * @param string $title
+         * @return $this 
+         * @static 
+         */ 
+        public static function overlay($message = null, $title = 'Notice')
+        {
+            return \Laracasts\Flash\FlashNotifier::overlay($message, $title);
+        }
+        
+        /**
+         * Add an "important" flash to the session.
+         *
+         * @return $this 
+         * @static 
+         */ 
+        public static function important()
+        {
+            return \Laracasts\Flash\FlashNotifier::important();
+        }
+        
+        /**
+         * Clear all registered messages.
+         *
+         * @return $this 
+         * @static 
+         */ 
+        public static function clear()
+        {
+            return \Laracasts\Flash\FlashNotifier::clear();
+        }
+         
+    }
+ 
+}
+
 namespace Laravel\Socialite\Facades { 
 
     class Socialite {
@@ -13354,6 +13255,14 @@ namespace Maatwebsite\Excel\Facades {
  
 }
 
+namespace Zhuzhichao\IpLocationZh { 
+
+    class Ip {
+         
+    }
+ 
+}
+
 
 namespace  { 
 
@@ -13374,8 +13283,6 @@ namespace  {
     class Config extends \Illuminate\Support\Facades\Config {}
 
     class Cookie extends \Illuminate\Support\Facades\Cookie {}
-
-    class Crypt extends \Illuminate\Support\Facades\Crypt {}
 
     class DB extends \Illuminate\Support\Facades\DB {}
 
@@ -15497,15 +15404,15 @@ namespace  {
 
     class Geetest extends \Germey\Geetest\Geetest {}
 
-    class Flash extends \Laracasts\Flash\Flash {}
-
-    class Ip extends \Zhuzhichao\IpLocationZh\Ip {}
-
     class Debugbar extends \Barryvdh\Debugbar\Facade {}
+
+    class Flash extends \Laracasts\Flash\Flash {}
 
     class Socialite extends \Laravel\Socialite\Facades\Socialite {}
 
     class Excel extends \Maatwebsite\Excel\Facades\Excel {}
+
+    class Ip extends \Zhuzhichao\IpLocationZh\Ip {}
  
 }
 
