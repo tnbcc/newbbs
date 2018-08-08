@@ -59,5 +59,6 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'rbac' => \App\Http\Middleware\RbacAuth::class,   //后台BBAC权限控制
         'auth.api' => \App\Http\Middleware\AuthApi::class,
+        'email_verified' => \App\Http\Middleware\CheckEmailVerified::class,
     ];
 }

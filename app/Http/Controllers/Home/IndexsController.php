@@ -11,4 +11,8 @@ class IndexsController extends Controller
     {
         return view('home.indexs.index');
     }
+    public function emailVerifyNotice()
+    {
+        return view('home.indexs.email_verify_notice');
+    }
 }

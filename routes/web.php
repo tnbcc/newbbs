@@ -3,6 +3,14 @@
 /**前台路由**/
 Route::group(['namespace'=> 'Home'],function (){
    Route::get('/','IndexsController@index')->name('home.indexs.index');
+    Route::group(['middleware' => 'auth:web'], function() {
+        Route::get('/email_verify_notice', 'IndexsController@emailVerifyNotice')->name('email_verify_notice');
+        Route::group(['middleware' => 'email_verified'], function() {
+            Route::get('/te', function() {
+                return 'Your email is verified';
+            });
+        });
+    });
 });
 
 /**后台模块**/
