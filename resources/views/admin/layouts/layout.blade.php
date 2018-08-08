@@ -21,7 +21,8 @@
     @include('flash::message')
     @yield('content')
 </div>
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{loadEdition('/js/jquery.min.js')}}"></script>
+<script src="{{loadEdition('/admin/js/bootstrap.min.js')}}"></script>
 @yield('js')
 <script>
     $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
