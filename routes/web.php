@@ -8,9 +8,7 @@ Route::group(['namespace'=> 'Home'],function (){
         Route::get('/email_verification/verify', 'EmailVerificationController@verify')->name('email_verification.verify');
         Route::get('/email_verification/send', 'EmailVerificationController@send')->name('email_verification.send');
         Route::group(['middleware' => 'email_verified'], function() {
-            Route::get('/te', function() {
-                return 'Your email is verified';
-            });
+            Route::get('user_addresses/create', 'UserAddressesController@create')->name('user_addresses.create');
         });
     });
 });
