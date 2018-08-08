@@ -1,8 +1,9 @@
 <?php
 
-/**
- * 后台路由
- */
+/**前台路由**/
+Route::group(['namespace'=> 'Home'],function (){
+   Route::get('/','IndexsController@index')->name('home.indexs.index');
+});
 
 /**后台模块**/
 Route::group(['namespace' => 'Admin','prefix' => 'admin'], function (){
