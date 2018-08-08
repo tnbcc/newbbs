@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.5.40 on 2018-08-08 02:59:25.
+ * Generated for Laravel 5.5.40 on 2018-08-08 11:41:57.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -3293,6 +3293,98 @@ namespace Illuminate\Support\Facades {
         public static function getQueuedCookies()
         {
             return \Illuminate\Cookie\CookieJar::getQueuedCookies();
+        }
+         
+    }
+
+    class Crypt {
+        
+        /**
+         * Determine if the given key and cipher combination is valid.
+         *
+         * @param string $key
+         * @param string $cipher
+         * @return bool 
+         * @static 
+         */ 
+        public static function supported($key, $cipher)
+        {
+            return \Illuminate\Encryption\Encrypter::supported($key, $cipher);
+        }
+        
+        /**
+         * Create a new encryption key for the given cipher.
+         *
+         * @param string $cipher
+         * @return string 
+         * @static 
+         */ 
+        public static function generateKey($cipher)
+        {
+            return \Illuminate\Encryption\Encrypter::generateKey($cipher);
+        }
+        
+        /**
+         * Encrypt the given value.
+         *
+         * @param mixed $value
+         * @param bool $serialize
+         * @return string 
+         * @throws \Illuminate\Contracts\Encryption\EncryptException
+         * @static 
+         */ 
+        public static function encrypt($value, $serialize = true)
+        {
+            return \Illuminate\Encryption\Encrypter::encrypt($value, $serialize);
+        }
+        
+        /**
+         * Encrypt a string without serialization.
+         *
+         * @param string $value
+         * @return string 
+         * @static 
+         */ 
+        public static function encryptString($value)
+        {
+            return \Illuminate\Encryption\Encrypter::encryptString($value);
+        }
+        
+        /**
+         * Decrypt the given value.
+         *
+         * @param mixed $payload
+         * @param bool $unserialize
+         * @return string 
+         * @throws \Illuminate\Contracts\Encryption\DecryptException
+         * @static 
+         */ 
+        public static function decrypt($payload, $unserialize = true)
+        {
+            return \Illuminate\Encryption\Encrypter::decrypt($payload, $unserialize);
+        }
+        
+        /**
+         * Decrypt the given string without unserialization.
+         *
+         * @param string $payload
+         * @return string 
+         * @static 
+         */ 
+        public static function decryptString($payload)
+        {
+            return \Illuminate\Encryption\Encrypter::decryptString($payload);
+        }
+        
+        /**
+         * Get the encryption key.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getKey()
+        {
+            return \Illuminate\Encryption\Encrypter::getKey();
         }
          
     }
@@ -12916,6 +13008,244 @@ namespace Barryvdh\Debugbar {
  
 }
 
+namespace Clockwork\Support\Laravel { 
+
+    class Facade {
+        
+        /**
+         * Add a new data source
+         *
+         * @static 
+         */ 
+        public static function addDataSource($dataSource)
+        {
+            return \Clockwork\Clockwork::addDataSource($dataSource);
+        }
+        
+        /**
+         * Return array of all added data sources
+         *
+         * @static 
+         */ 
+        public static function getDataSources()
+        {
+            return \Clockwork\Clockwork::getDataSources();
+        }
+        
+        /**
+         * Return the request object
+         *
+         * @static 
+         */ 
+        public static function getRequest()
+        {
+            return \Clockwork\Clockwork::getRequest();
+        }
+        
+        /**
+         * Set a custom request object
+         *
+         * @static 
+         */ 
+        public static function setRequest($request)
+        {
+            return \Clockwork\Clockwork::setRequest($request);
+        }
+        
+        /**
+         * Add data from all data sources to request
+         *
+         * @static 
+         */ 
+        public static function resolveRequest()
+        {
+            return \Clockwork\Clockwork::resolveRequest();
+        }
+        
+        /**
+         * Store request via storage object
+         *
+         * @static 
+         */ 
+        public static function storeRequest()
+        {
+            return \Clockwork\Clockwork::storeRequest();
+        }
+        
+        /**
+         * Return the storage object
+         *
+         * @static 
+         */ 
+        public static function getStorage()
+        {
+            return \Clockwork\Clockwork::getStorage();
+        }
+        
+        /**
+         * Set a custom storage object
+         *
+         * @static 
+         */ 
+        public static function setStorage($storage)
+        {
+            return \Clockwork\Clockwork::setStorage($storage);
+        }
+        
+        /**
+         * Return the log instance
+         *
+         * @static 
+         */ 
+        public static function getLog()
+        {
+            return \Clockwork\Clockwork::getLog();
+        }
+        
+        /**
+         * Set a custom log instance
+         *
+         * @static 
+         */ 
+        public static function setLog($log)
+        {
+            return \Clockwork\Clockwork::setLog($log);
+        }
+        
+        /**
+         * Return the timeline instance
+         *
+         * @static 
+         */ 
+        public static function getTimeline()
+        {
+            return \Clockwork\Clockwork::getTimeline();
+        }
+        
+        /**
+         * Set a custom timeline instance
+         *
+         * @static 
+         */ 
+        public static function setTimeline($timeline)
+        {
+            return \Clockwork\Clockwork::setTimeline($timeline);
+        }
+        
+        /**
+         * Shortcut methods for the current log instance
+         *
+         * @static 
+         */ 
+        public static function log($level, $message, $context = array())
+        {
+            return \Clockwork\Clockwork::log($level, $message, $context);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function emergency($message, $context = array())
+        {
+            return \Clockwork\Clockwork::emergency($message, $context);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function alert($message, $context = array())
+        {
+            return \Clockwork\Clockwork::alert($message, $context);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function critical($message, $context = array())
+        {
+            return \Clockwork\Clockwork::critical($message, $context);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function error($message, $context = array())
+        {
+            return \Clockwork\Clockwork::error($message, $context);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function warning($message, $context = array())
+        {
+            return \Clockwork\Clockwork::warning($message, $context);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function notice($message, $context = array())
+        {
+            return \Clockwork\Clockwork::notice($message, $context);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function info($message, $context = array())
+        {
+            return \Clockwork\Clockwork::info($message, $context);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function debug($message, $context = array())
+        {
+            return \Clockwork\Clockwork::debug($message, $context);
+        }
+        
+        /**
+         * Shortcut methods for the current timeline instance
+         *
+         * @static 
+         */ 
+        public static function startEvent($name, $description, $time = null)
+        {
+            return \Clockwork\Clockwork::startEvent($name, $description, $time);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function endEvent($name)
+        {
+            return \Clockwork\Clockwork::endEvent($name);
+        }
+         
+    }
+ 
+}
+
 namespace Laracasts\Flash { 
 
     class Flash {
@@ -13283,6 +13613,8 @@ namespace  {
     class Config extends \Illuminate\Support\Facades\Config {}
 
     class Cookie extends \Illuminate\Support\Facades\Cookie {}
+
+    class Crypt extends \Illuminate\Support\Facades\Crypt {}
 
     class DB extends \Illuminate\Support\Facades\DB {}
 
@@ -15405,6 +15737,8 @@ namespace  {
     class Geetest extends \Germey\Geetest\Geetest {}
 
     class Debugbar extends \Barryvdh\Debugbar\Facade {}
+
+    class Clockwork extends \Clockwork\Support\Laravel\Facade {}
 
     class Flash extends \Laracasts\Flash\Flash {}
 
