@@ -56,6 +56,10 @@ class RegisterController extends Controller
                 'regex:/^((13[0-9])|(14[5,7])|(15[0-3,5-9])|(17[0,3,5-8])|(18[0-9])|166|198|199|(147))\d{8}$/',
                 'unique:users',
             ],
+            'captcha' => 'required|captcha',
+        ],[
+            'captcha.required' => '验证码不能为空',
+            'captcha.captcha' => '请输入正确的验证码',
         ]);
     }
 
