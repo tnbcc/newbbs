@@ -11,6 +11,7 @@ Route::group(['namespace'=> 'Home'],function (){
         Route::get('/email_verification/send', 'EmailVerificationController@send')->name('email_verification.send');
         Route::group(['middleware' => 'email_verified'], function() {
             Route::get('user_addresses/create', 'UserAddressesController@create')->name('user_addresses.create');
+            Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
         });
     });
 });
