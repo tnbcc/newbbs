@@ -3,6 +3,7 @@
 /**前台路由**/
 Route::group(['namespace'=> 'Home'],function (){
    Route::get('/','IndexsController@index')->name('home.indexs.index');
+   Route::get('/pdf','PdfController@index')->name('home.pdf.index');
     Route::group(['middleware' => 'auth:web'], function() {
         Route::get('/email_verify_notice', 'IndexsController@emailVerifyNotice')->name('email_verify_notice');
         Route::get('/email_verification/verify', 'EmailVerificationController@verify')->name('email_verification.verify');
